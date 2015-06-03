@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="elocs.plugin.zeroconf_win" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>zeroconf_win</name>
+    <js-module name="zeroconf_win" src="www/zeroconf_win.js">
+        <clobbers target="cordova.plugins.zeroconf_win" />
+    </js-module>
+	
+	<!-- wp8 -->
+    <platform name="wp8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Zeroconf_win">
+                <param name="wp-package" value="Zeroconf_win"/>
+            </feature>
+        </config-file>
+
+      <source-file src="src/wp/zeroconf_win.cs" />
+      <source-file src="src/wp/AsyncLock.cs.cs" />
+      <source-file src="src/wp/INetworkInterface.cs" />
+      <source-file src="src/wp/ZeroconfRecord.cs" />
+      <source-file src="src/wp/ZeroconfResolver.cs" />
+      <source-file src="src/wp/Dns/Header.cs" />
+      <source-file src="src/wp/Dns/Question.cs" />
+      <source-file src="src/wp/Dns/Record.cs" />
+      <source-file src="src/wp/Dns/RecordA.cs" />
+      <source-file src="src/wp/Dns/RecordAAAA.cs" />
+      <source-file src="src/wp/Dns/RecordNSEC.cs" />
+      <source-file src="src/wp/Dns/RecordPTR.cs" />
+      <source-file src="src/wp/Dns/RecordReader.cs" />
+      <source-file src="src/wp/Dns/RecordSRV.cs" />
+      <source-file src="src/wp/Dns/RecordTXT.cs" />
+      <source-file src="src/wp/Dns/RecordUnknown.cs" />
+      <source-file src="src/wp/Dns/Request.cs" />
+      <source-file src="src/wp/Dns/Response.cs" />
+      <source-file src="src/wp/Dns/RR.cs" />
+      <source-file src="src/wp/Dns/Structs.cs" />
+    </platform>
+
+    <!-- windows -->
+    <platform name="windows">
+        <js-module src="src/windows/zeroconf_winProxy.js" name="zeroconf_winProxy">
+            <merges target="" />
+        </js-module>
+    </platform>
+</plugin>
