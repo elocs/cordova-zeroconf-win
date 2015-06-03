@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="elocs.plugin.zeroconf_win" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>zeroconf_win</name>
+	<repo>https://github.com/elocs/cordova-zeroconf-win.git</repo>
+	
     <js-module name="zeroconf_win" src="www/zeroconf_win.js">
         <clobbers target="cordova.plugins.zeroconf_win" />
     </js-module>
